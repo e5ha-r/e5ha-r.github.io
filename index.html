@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Esha Rehman</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Esha Rehman — AI Engineer & Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --navy: #0f1623;
@@ -185,7 +185,7 @@ nav{
   background:var(--sand-2);border-radius:var(--r-lg);padding:26px 28px;
   border-left:3px solid var(--rose);transition:transform 0.25s;
 }
-.exp-card:hover{transform:translateY(-4px);} 
+.exp-card:hover{transform:translateY(-4px);}
 .exp-period{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--rose);margin-bottom:6px;}
 .exp-role{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .exp-co{font-size:0.8rem;color:var(--ink-muted);margin-bottom:14px;}
@@ -232,7 +232,7 @@ nav{
 .featured:hover{border-color:rgba(196,117,106,0.30);}
 .feat-head{padding:30px 34px 22px;border-bottom:1px solid rgba(245,240,232,0.07);}
 .feat-meta{display:flex;align-items:center;gap:10px;margin-bottom:11px;flex-wrap:wrap;}
-.feat-tag{display:inline-block;background:rgba(196,117,106,0.11);color:var(--rose-light);border:1px solid rgba(196,117,106,0.20);padding:4px 11px;border-radius:50px;font-family:'JetBrains Mono',m[...]
+.feat-tag{display:inline-block;background:rgba(196,117,106,0.11);color:var(--rose-light);border:1px solid rgba(196,117,106,0.20);padding:4px 11px;border-radius:50px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;}
 .feat-title{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--sand);margin-bottom:7px;}
 .feat-desc{font-size:0.86rem;line-height:1.72;color:rgba(245,240,232,0.52);max-width:680px;margin-bottom:14px;}
 .feat-chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
@@ -245,35 +245,32 @@ nav{
 .feat-link:hover{background:rgba(196,117,106,0.14);}
 .feat-imgs{padding:22px 34px 30px;display:grid;gap:14px;}
 .feat-2col{grid-template-columns:1fr 1fr;}
+.feat-imgs > div{display:flex;flex-direction:column;gap:8px;}
 .img-lbl{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--rose);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
 
-/* PLACEHOLDER */
+/* PLACEHOLDER — empty state (shown when no <img> is present) */
 .ph{border:1.5px dashed rgba(196,117,106,0.30);border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.02);}
-.ph-head{background:rgba(196,117,106,0.09);border-bottom:1px dashed rgba(196,117,106,0.20);padding:7px 11px;font-family:'JetBrains Mono',monospace;font-size:0.59rem;color:var(--rose);letter-spaci[...]
+.ph-head{background:rgba(196,117,106,0.09);border-bottom:1px dashed rgba(196,117,106,0.20);padding:7px 11px;font-family:'JetBrains Mono',monospace;font-size:0.59rem;color:var(--rose);letter-spacing:0.08em;text-transform:uppercase;}
 .ph-body{min-height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:14px;}
-.ph-icon{width:38px;height:38px;border-radius:8px;border:1.5px solid rgba(196,117,106,0.28);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:rgba(196,117,106,0.45);}[...]
+.ph-icon{width:38px;height:38px;border-radius:8px;border:1.5px solid rgba(196,117,106,0.28);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:rgba(196,117,106,0.45);}
 .ph-lbl{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:rgba(196,117,106,0.50);text-align:center;line-height:1.5;}
 .ph-hint{font-size:0.58rem;color:rgba(196,117,106,0.32);font-family:'JetBrains Mono',monospace;}
 
-/* Image formatting: centralized styles for all featured/demo images */
-.ph-head img, .feat-imgs img {
+/* IMAGE BOX — used when actual screenshots are provided */
+.img-box{border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.03);border:1px solid rgba(196,117,106,0.18);}
+.img-box img{
   width:100%;
-  height:auto;
+  height:220px;
   display:block;
-  border-radius:12px;
   object-fit:cover;
-  box-shadow:0 8px 22px rgba(10,16,25,0.12);
-  border:1px solid rgba(255,255,255,0.02);
+  object-position:top center;
 }
-
-/* ensure small thumbnails keep consistent aspect on narrow screens */
-.feat-imgs > div { display:flex; flex-direction:column; gap:8px; }
 
 /* ── SKILLS ── */
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
 .sg-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:13px;}
 .skill-tags{display:flex;flex-wrap:wrap;gap:7px;}
-.sk{background:var(--navy);color:rgba(245,240,232,0.78);padding:7px 15px;border-radius:50px;font-size:0.78rem;font-family:'JetBrains Mono',monospace;border:1px solid rgba(255,255,255,0.05);transi[...]
+.sk{background:var(--navy);color:rgba(245,240,232,0.78);padding:7px 15px;border-radius:50px;font-size:0.78rem;font-family:'JetBrains Mono',monospace;border:1px solid rgba(255,255,255,0.05);transition:background 0.2s;}
 .sk:hover{background:var(--navy-4);}
 .sk.star{background:var(--rose);color:var(--sand);border-color:var(--rose);}
 .sg{margin-bottom:32px;}
@@ -299,7 +296,7 @@ nav{
   font-weight:900;font-style:italic;color:transparent;
   -webkit-text-stroke:1px rgba(196,117,106,0.06);white-space:nowrap;pointer-events:none;
 }
-.contact-h{font-family:'Playfair Display',serif;font-size:clamp(44px,7.5vw,90px);font-weight:700;font-style:italic;color:var(--sand);line-height:1;margin-bottom:14px;position:relative;z-index:2;}[...]
+.contact-h{font-family:'Playfair Display',serif;font-size:clamp(44px,7.5vw,90px);font-weight:700;font-style:italic;color:var(--sand);line-height:1;margin-bottom:14px;position:relative;z-index:2;}
 .contact-sub{color:rgba(245,240,232,0.45);margin-bottom:36px;font-weight:300;position:relative;z-index:2;}
 .contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
 .cb{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:50px;font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-decoration:none;transition:all 0.2s;}
@@ -318,7 +315,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
 .fade.on{opacity:1;transform:translateY(0);}
 
 /* ── MOBILE NAV DROPDOWN ── */
-.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,22,35,0.98);backdrop-filter:blur(20px);z-index:190;padding:20px 28px;flex-direction:column;gap:16px;border-bottom:[...]
+.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(15,22,35,0.98);backdrop-filter:blur(20px);z-index:190;padding:20px 28px;flex-direction:column;gap:16px;border-bottom:1px solid rgba(196,117,106,0.12);}
 .mob-menu.open{display:flex;}
 .mob-menu a{color:rgba(245,240,232,0.65);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:0.82rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
 .mob-menu a:hover{color:var(--rose-light);}
@@ -383,11 +380,12 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
   <div class="hero-orb orb2"></div>
   <div class="hero-orb orb3"></div>
   <div class="hero-content">
+    <p class="hero-eyebrow">AI Engineer &amp; Builder · NUST, Islamabad</p>
     <h1 class="hero-name">ESHA<span class="outline">REHMAN</span></h1>
     <div class="hero-bottom">
       <p class="hero-bio">Building intelligent systems at the intersection of machine learning, computer vision, and thoughtful product design.</p>
       <div class="hero-links">
-        <a href="https://github.com/e5ha-r" target="_blank">github: /e5ha-r</a>
+        <a href="https://github.com/e5ha-r" target="_blank">gh: /e5ha-r</a>
         <a href="mailto:esha.rehman966@gmail.com">✉ esha.rehman966@gmail.com</a>
         <a href="https://linkedin.com/in/esha-rehman" target="_blank">li: /esha-rehman</a>
       </div>
@@ -406,7 +404,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
       <div>
         <p class="sec-label">Who I am</p>
         <h2 class="about-heading">Hello,<br>I'm Esha!</h2>
-        <p class="about-p">I'm an AI student at NUST, Islamabad — learning by building. I'm drawn to the intersection of AI, design, and product thinking, with a focus on creating intuitive, us[...]</p>
+        <p class="about-p">I'm an AI student at NUST, Islamabad — learning by building. I'm drawn to the intersection of AI, design, and product thinking, with a focus on creating intuitive, user-centered experiences.</p>
         <p class="about-p">Currently seeking internship opportunities to collaborate with great teams and grow in the field.</p>
         <a href="https://linkedin.com/in/esha-rehman" target="_blank" class="about-btn">↗ Connect on LinkedIn</a>
       </div>
@@ -512,20 +510,24 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
           <span class="feat-tag">Cloud Deployed</span>
         </div>
         <div class="feat-title">Rule-Augmented Credit Risk Decision System</div>
-        <div class="feat-desc">A full-stack AI credit risk system combining Random Forest and LightGBM predictions with a rule-based decision engine on the German Credit Dataset. Features REST AP[...]</div>
+        <div class="feat-desc">A full-stack AI credit risk system combining Random Forest and LightGBM predictions with a rule-based decision engine on the German Credit Dataset. Features REST APIs with Pydantic validation, Swagger docs, model persistence, logging, conflict detection — deployed on Railway via Docker.</div>
         <div class="feat-chips">
-          <span class="chip">FastAPI</span><span class="chip">Scikit-learn</span><span class="chip">LightGBM</span><span class="chip">Docker</span><span class="chip">JavaScript</span><span class="chip">[...]</span>
+          <span class="chip">FastAPI</span><span class="chip">Scikit-learn</span><span class="chip">LightGBM</span><span class="chip">Docker</span><span class="chip">JavaScript</span><span class="chip">Railway</span>
         </div>
         <a href="https://creditriskproject-production.up.railway.app/" class="feat-link" target="_blank">↗ Live Demo</a>
       </div>
       <div class="feat-imgs feat-2col">
         <div>
           <div class="img-lbl">Model Confusion Matrix</div>
-          <div class="ph"><div class="ph-head"><img src="confusion-matrix.png" alt="Confusion Matrix"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">Confusion Matrix<br>Model Performance</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="confusion-matrix.png" alt="Confusion Matrix — model evaluation results">
+          </div>
         </div>
         <div>
           <div class="img-lbl">App Dashboard</div>
-          <div class="ph"><div class="ph-head"><img src="dashboard.png" alt="Dashboard"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">App Dashboard<br>Web UI</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="dashboard.png" alt="Credit Risk App Dashboard UI">
+          </div>
         </div>
       </div>
     </div>
@@ -539,28 +541,36 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
           <span class="feat-tag">Spotify API</span>
         </div>
         <div class="feat-title">Pinterestify — Visual Board &amp; Music Platform</div>
-        <div class="feat-desc">A full-stack Pinterest-inspired web application enabling users to create, manage, and organize visual boards with real-time interactions. Integrates the Spotify API[...]</div>
+        <div class="feat-desc">A full-stack Pinterest-inspired web application enabling users to create, manage, and organize visual boards with real-time interactions. Integrates the Spotify API for music discovery alongside board creation. Secure JWT + bcrypt authentication, MongoDB-based Mongoose data models, and Docker deployment on Railway with a Vercel frontend.</div>
         <div class="feat-chips">
-          <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">JWT</span><span class="chip">S[...]</span>
+          <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">JWT</span><span class="chip">Spotify API</span><span class="chip">Docker</span><span class="chip">Vercel</span>
         </div>
         <a href="https://github.com/e5ha-r/Pinterestify.git" class="feat-link" target="_blank">↗ GitHub Repo</a>
       </div>
       <div class="feat-imgs feat-2col">
         <div>
           <div class="img-lbl">Login Page</div>
-          <div class="ph"><div class="ph-head"><img src="login.png" alt="Login Page"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">Login Page<br>Auth Screen</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="login.png" alt="Pinterestify Login Page">
+          </div>
         </div>
         <div>
           <div class="img-lbl">Homepage / Feed</div>
-          <div class="ph"><div class="ph-head"><img src="homepage.png" alt="Home Page"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">Homepage<br>Main Board Feed</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="homepage.png" alt="Pinterestify Homepage Feed">
+          </div>
         </div>
         <div>
           <div class="img-lbl">Create a Board</div>
-          <div class="ph"><div class="ph-head"><img src="board.png" alt="board"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">Create Board<br>Board Creation Flow</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="board.png" alt="Pinterestify Create Board">
+          </div>
         </div>
         <div>
           <div class="img-lbl">Song Selection</div>
-          <div class="ph"><div class="ph-head"><img src="Playlist.png" alt="Playlist"></div><div class="ph-body"><div class="ph-icon">⬡</div><div class="ph-lbl">Song Selection<br>Spotify Integration</div><div class="ph-hint">Replace with &lt;img src="..."&gt;</div></div></div>
+          <div class="img-box">
+            <img src="Playlist.png" alt="Pinterestify Spotify Song Selection">
+          </div>
         </div>
       </div>
     </div>
@@ -572,7 +582,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
           <div class="proj-icon">🛡️</div>
           <span class="proj-cat">Cybersecurity</span>
           <div class="proj-title">Real-Time Network Intrusion Detection</div>
-          <div class="proj-desc">Live packet capture with XGBoost classification distinguishing malicious from benign traffic. Automated TCP reset &amp; ICMP blocking with multithreaded architect[...]
+          <div class="proj-desc">Live packet capture with XGBoost classification distinguishing malicious from benign traffic. Automated TCP reset &amp; ICMP blocking with multithreaded architecture.</div>
           <div class="chips"><span class="chip">Python</span><span class="chip">Scapy</span><span class="chip">XGBoost</span></div>
         </div>
       </div>
@@ -581,7 +591,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
           <div class="proj-icon">🤖</div>
           <span class="proj-cat">ML Engineering</span>
           <div class="proj-title">ML Model Evaluation Platform</div>
-          <div class="proj-desc">Interactive platform for training, evaluating and comparing ML models with preprocessing pipelines, feature selection and performance metrics across multiple algo[...]
+          <div class="proj-desc">Interactive platform for training, evaluating and comparing ML models with preprocessing pipelines, feature selection and performance metrics across multiple algorithms.</div>
           <div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Streamlit</span></div>
         </div>
       </div>
@@ -599,7 +609,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
           <div class="proj-icon">🦠</div>
           <span class="proj-cat">Graph Theory</span>
           <div class="proj-title">Disease Spread Simulation</div>
-          <div class="proj-desc">Graph-based disease propagation modeling using real-world social network datasets. Centrality measures identify the most influential spreader nodes in a network.<[...]
+          <div class="proj-desc">Graph-based disease propagation modeling using real-world social network datasets. Centrality measures identify the most influential spreader nodes in a network.</div>
           <div class="chips"><span class="chip">Python</span><span class="chip">Network Analysis</span><span class="chip">Graph Theory</span></div>
         </div>
       </div>
@@ -631,13 +641,13 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
         <div class="sg">
           <div class="sg-title">AI &amp; Machine Learning</div>
           <div class="skill-tags">
-            <span class="sk star">Python</span><span class="sk star">Machine Learning</span><span class="sk">Computer Vision</span><span class="sk">TensorFlow</span><span class="sk">Scikit-learn[...]</span>
+            <span class="sk star">Python</span><span class="sk star">Machine Learning</span><span class="sk">Computer Vision</span><span class="sk">TensorFlow</span><span class="sk">Scikit-learn</span><span class="sk">VGG16</span><span class="sk">YOLO</span><span class="sk">MTCNN</span><span class="sk">XGBoost</span><span class="sk">LightGBM</span><span class="sk">Feature Extraction</span><span class="sk">Face Recognition</span>
           </div>
         </div>
         <div class="sg">
           <div class="sg-title">Data &amp; Databases</div>
           <div class="skill-tags">
-            <span class="sk star">SQL</span><span class="sk">MongoDB</span><span class="sk">MySQL</span><span class="sk">Pandas</span><span class="sk">NumPy</span><span class="sk">Matplotlib</span>
+            <span class="sk star">SQL</span><span class="sk">MongoDB</span><span class="sk">MySQL</span><span class="sk">Pandas</span><span class="sk">NumPy</span><span class="sk">Matplotlib</span><span class="sk">Looker Studio</span><span class="sk">DBMS</span>
           </div>
         </div>
       </div>
@@ -645,13 +655,13 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);paddin
         <div class="sg">
           <div class="sg-title">Web &amp; Backend</div>
           <div class="skill-tags">
-            <span class="sk star">React.js</span><span class="sk">Node.js</span><span class="sk">Express.js</span><span class="sk">FastAPI</span><span class="sk">REST APIs</span><span class="sk">[...]</span>
+            <span class="sk star">React.js</span><span class="sk">Node.js</span><span class="sk">Express.js</span><span class="sk">FastAPI</span><span class="sk">REST APIs</span><span class="sk">JWT Auth</span><span class="sk">Docker</span><span class="sk">Railway</span><span class="sk">Vercel</span>
           </div>
         </div>
         <div class="sg">
           <div class="sg-title">Engineering &amp; Security</div>
           <div class="skill-tags">
-            <span class="sk">Scapy</span><span class="sk">Multithreading</span><span class="sk">Computer Networks</span><span class="sk">Information Security</span><span class="sk">DSA</span><span class="sk">[...]</span>
+            <span class="sk">Scapy</span><span class="sk">Multithreading</span><span class="sk">Computer Networks</span><span class="sk">Information Security</span><span class="sk">DSA</span><span class="sk">Git/GitHub</span>
           </div>
         </div>
         <div class="sg">
